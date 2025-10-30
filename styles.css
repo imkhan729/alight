@@ -5774,11 +5774,12 @@ p {
     .version-item:hover::before {
         width: 6px;
     }
-    .version-info h3 {
+    .version-item h3 {
         font-size: 1.2rem;
         font-weight: 600;
         color: var(--text-dark);
         margin: 0;
+        flex: 1;
     }
     .btn-download-version {
         background: var(--gradient-primary);
@@ -5848,7 +5849,7 @@ p {
             gap: 1rem;
             padding: 1.25rem 1.5rem;
         }
-        .version-info h3 {
+        .version-item h3 {
             font-size: 1.1rem;
         }
         .btn-download-version {
@@ -5885,7 +5886,7 @@ p {
         .version-item {
             padding: 1rem 1.25rem;
         }
-        .version-info h3 {
+        .version-item h3 {
             font-size: 1rem;
         }
         .btn-download-version {
