@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Test</title>
+</head>
+<body>
+    <h1>Regex Test for Blog URLs</h1>
+    <script>
+        const cleanBlog = /^\/blog\/([^/.#?]+)$/;
+        const testUrls = [
+            '/blog/how-to-use-presets-in-alightmotion',
+            '/blog/how-to-add-text-in-alightimotion',
+            '/blog/how-to-use-presets-in-alightmotion.html', // Should not match
+            '/blog/category/how-to-use-presets', // Should not match
+            '/privacy-policy'
+        ];
+        
+        testUrls.forEach(url => {
+            console.log(`Testing: ${url}`);
+            console.log(`Blog pattern match: ${cleanBlog.test(url)}`);
+            if (cleanBlog.test(url)) {
+                const match = url.match(cleanBlog);
+                console.log(`Slug extracted: ${match[1]}`);
+            }
+        });
+        
+        const cleanRoot = /^\/(privacy-policy|terms-of-service|dmca)$/;
+        console.log(`Privacy policy match: ${cleanRoot.test('/privacy-policy')}`);
+    </script>
+</body>
+</html>

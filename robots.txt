@@ -1,0 +1,54 @@
+User-agent: *
+Allow: /
+
+# Allow all important content and directories
+Allow: /blog/
+Allow: /blog/*.html
+Allow: /images/
+Allow: /*.html
+Allow: /privacy-policy
+Allow: /terms-of-service
+Allow: /dmca
+Allow: /manifest.json
+Allow: /styles.css
+Allow: /script.js
+Allow: /sitemap.xml
+Allow: /robots.txt
+
+# Allow all file types
+Allow: /*.css
+Allow: /*.js
+Allow: /*.webp
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+
+# Allow homepage sections for better SEO
+Allow: /#pricing
+Allow: /#about
+Allow: /#features
+Allow: /#faq
+Allow: /#requirements
+Allow: /#download
+Allow: /#installation
+
+# Only disallow problematic hash URLs from blog posts
+Disallow: /blog/*.html#*
+
+# Allow all homepage sections for better SEO
+Allow: /#pricing
+Allow: /#about
+Allow: /#features
+Allow: /#faq
+Allow: /#requirements
+Allow: /#download
+Allow: /#installation
+
+# Sitemap location
+Sitemap: https://alightmotionpremium.com/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
